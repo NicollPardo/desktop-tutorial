@@ -1,6 +1,6 @@
 document.getElementById('consulta').addEventListener('click', () => {
     const contenedor = document.getElementById('usuarios');
-    contenedor.innerHTML = ''; // Limpiamos el contenedor antes de agregar nuevos elementos
+    contenedor.innerHTML = ''; 
 
     fetch('https://jsonplaceholder.typicode.com/users')
         .then(response => response.json())
@@ -19,7 +19,7 @@ document.getElementById('consulta').addEventListener('click', () => {
                 contenedor.appendChild(email);
                 contenedor.appendChild(empresa);
                 
-                // Agregamos un separador entre usuarios
+                
                 contenedor.appendChild(document.createElement('hr'));
             });
         })
